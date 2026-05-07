@@ -88,6 +88,10 @@ Findings:
 
 ## Follow-Up Tasks
 
+Detailed Korean roadmap:
+
+- `docs/glossary-roadmap.md`
+
 - Try D4Analyzer again with a Battle.net Diablo IV install. The Steam install
   was not recognized as a valid local storage by the tested tools.
 - If D4Analyzer opens the Battle.net install, export `StringLists /
