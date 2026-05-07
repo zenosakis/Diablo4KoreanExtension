@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Diablo IV Korean Translator",
+  "description": "Translates Diablo IV build pages to Korean with in-game terminology.",
+  "version": "0.1.0",
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Diablo IV Korean Translator"
+  },
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": [
+    "https://maxroll.gg/*",
+    "https://helltides.com/*"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "https://maxroll.gg/*",
+        "https://helltides.com/*"
+      ],
+      "js": ["src/content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "data/diablo4-ko-glossary.json",
+        "data/diablo4-ko-phrase-rules.json"
+      ],
+      "matches": [
+        "https://maxroll.gg/*",
+        "https://helltides.com/*"
+      ]
+    }
+  ]
+}

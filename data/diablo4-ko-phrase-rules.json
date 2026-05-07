@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "description": "Small phrase-level rewrites that improve Diablo IV build-page translation quality before/after machine translation.",
+  "preMachineTranslation": [
+    {
+      "from": "\\bendgame build\\b",
+      "to": "endgame build"
+    },
+    {
+      "from": "\\bleveling build\\b",
+      "to": "leveling build"
+    },
+    {
+      "from": "\\bBest in Slot\\b",
+      "to": "BiS"
+    }
+  ],
+  "postMachineTranslation": [
+    {
+      "from": "최종 게임 빌드",
+      "to": "엔드게임 빌드"
+    },
+    {
+      "from": "레벨링 빌드",
+      "to": "레벨링 빌드"
+    },
+    {
+      "from": "슬롯 최고",
+      "to": "BiS"
+    },
+    {
+      "from": "보스 열쇠",
+      "to": "우두머리 열쇠"
+    },
+    {
+      "from": "엘리트",
+      "to": "정예"
+    },
+    {
+      "from": "미니언",
+      "to": "하수인"
+    },
+    {
+      "from": "쿨다운",
+      "to": "재사용 대기시간"
+    },
+    {
+      "from": "크리티컬 스트라이크",
+      "to": "극대화"
+    },
+    {
+      "from": "취약한",
+      "to": "취약"
+    }
+  ]
+}

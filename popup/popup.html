@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Diablo IV Korean Translator</title>
+    <link rel="stylesheet" href="popup.css">
+  </head>
+  <body>
+    <main class="panel">
+      <header>
+        <h1>Diablo IV 번역</h1>
+        <p id="siteStatus">현재 탭 확인 중</p>
+      </header>
+
+      <label class="toggle">
+        <input id="enabledToggle" type="checkbox">
+        <span class="track" aria-hidden="true"></span>
+        <span class="label">현재 사이트에서 활성화</span>
+      </label>
+
+      <section class="status">
+        <div>
+          <span class="key">모드</span>
+          <span id="modeValue">대기 중</span>
+        </div>
+        <div>
+          <span class="key">용어 사전</span>
+          <span id="glossaryValue">확인 중</span>
+        </div>
+      </section>
+
+      <button id="translateButton" type="button">다시 번역</button>
+    </main>
+
+    <script src="popup.js"></script>
+  </body>
+</html>
