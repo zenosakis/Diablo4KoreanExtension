@@ -20,6 +20,85 @@ proper nouns keep the Korean in-game wording.
    missing English term keys.
 4. Manual verification in the Korean game client for ambiguous terms.
 
+## Mapping Rule
+
+Do not add semantic Korean translations for named items, skills, aspects,
+paragon nodes, or activities. Those entries should use a verified Korean game
+client string or a Korean database page with the same Diablo IV item/string id.
+
+Example:
+
+- `Heir of Perdition` must map to `영벌의 후예`, not `파멸의 계승자`.
+- `영벌의 후예` is verified from Wowhead Korean item id `2059799`.
+
+## Wowhead Audit Notes
+
+Verified item names by resolving the English Wowhead search result to the same
+Diablo IV item id on the Korean Wowhead page and reading the Korean page title.
+
+Corrections made from that audit:
+
+- `Heir of Perdition` -> `영벌의 후예`
+- `Starfall Coronet` -> `별똥별의 관`
+- `Mother's Embrace` is the canonical English name; `Mothers Embrace` is kept as
+  an alias.
+
+Verified skill names by resolving the English Wowhead search result to the same
+Diablo IV skill id on the Korean Wowhead page and reading the Korean page title.
+
+Corrections made from that audit:
+
+- `Barrage` -> `탄막`
+- `Rapid Fire` -> `연발 사격`
+- `Charged Bolts` -> `번개 줄기`
+- `Claw` -> `발톱`
+- `Maul` -> `할퀴기`
+- `Crushing Hand` -> `짓이기는 손`
+- `Crushing Force` -> `짓이기는 힘`
+
+Fallback note:
+
+- Unknown terms that are missing from the glossary can still be translated by
+  the browser/machine translator. `Crushing` was not in the glossary, so it
+  could be rendered as a generic phrase such as `눌러 터트리는`. Add verified
+  glossary entries for those terms to prevent that fallback from changing game
+  terminology.
+
+## Local Game Install Scan
+
+Scanned install path:
+
+- `D:\SteamLibrary\steamapps\common\Diablo IV`
+
+Findings:
+
+- The install uses packed `Data` files rather than loose locale JSON/CSV files.
+- `koKR` markers were found in these packed files:
+  - `Data\000\0x0103-meta.dat`
+  - `Data\000\1944276-0000.dat`
+- An `enUS` marker was found in:
+  - `Data\001\1893651-child.dat`
+- A plain-text log file contains Korean UI purchase messages that confirm class
+  names such as `도적`, `야만용사`, and `원소술사`:
+  - `_FenrisDebug-6.txt`
+- The packed locale files are not directly extractable with a text scan alone.
+  To build a complete official table from the install, use a CASC/VFS extractor
+  that can decode Diablo IV package data, then compare `enUS` and `koKR`
+  string tables by string key.
+
+## Follow-Up Tasks
+
+- Try D4Analyzer again with a Battle.net Diablo IV install. The Steam install
+  was not recognized as a valid local storage by the tested tools.
+- If D4Analyzer opens the Battle.net install, export `StringLists /
+  translations` for both `enUS` and `koKR`.
+- Build a generated glossary from matching `enUS` and `koKR` string ids, then
+  mark those entries as verified.
+- Keep Wowhead id-based checks for items, skills, aspects, and other database
+  objects where direct game string export is unavailable.
+- Add a review queue for glossary misses so browser translation fallback does
+  not silently invent game terminology.
+
 ## Useful references
 
 - Blizzard Korean patch notes:
@@ -30,6 +109,8 @@ proper nouns keep the Korean in-game wording.
   https://www.wowhead.com/diablo-4/ko/item/%ED%95%9C%EC%95%84%EB%B9%84-223271
 - Wowhead Korean item example, Harlequin Crest:
   https://www.wowhead.com/diablo-4/ko/item/%ED%95%A0%EB%A6%AC%ED%80%B8-%EA%B4%80%EB%AA%A8-609820
+- Wowhead Korean item example, Heir of Perdition:
+  https://www.wowhead.com/diablo-4/ko/item/%EC%98%81%EB%B2%8C%EC%9D%98-%ED%9B%84%EC%98%88-2059799
 - D4LF English term inventories:
   https://github.com/d4lfteam/d4lf/tree/main/assets/lang/enUS
 - Community English/Korean mapping reference:

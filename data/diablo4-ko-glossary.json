@@ -13,7 +13,19 @@
     "blizzard_ko_patch_notes": "https://news.blizzard.com/ko-kr/article/24266869/informacje-o-aktualizacji-gry-diablo-iv",
     "wowhead_ko_the_grandfather": "https://www.wowhead.com/diablo-4/ko/item/%ED%95%9C%EC%95%84%EB%B9%84-223271",
     "wowhead_ko_harlequin_crest": "https://www.wowhead.com/diablo-4/ko/item/%ED%95%A0%EB%A6%AC%ED%80%B8-%EA%B4%80%EB%AA%A8-609820",
-    "d4lf_english_term_inventory": "https://github.com/d4lfteam/d4lf/tree/main/assets/lang/enUS"
+    "wowhead_ko_heir_of_perdition": "https://www.wowhead.com/diablo-4/ko/item/%EC%98%81%EB%B2%8C%EC%9D%98-%ED%9B%84%EC%98%88-2059799",
+    "d4lf_english_term_inventory": "https://github.com/d4lfteam/d4lf/tree/main/assets/lang/enUS",
+    "local_game_install_scan": "D:\\SteamLibrary\\steamapps\\common\\Diablo IV",
+    "local_koKR_package_markers": [
+      "D:\\SteamLibrary\\steamapps\\common\\Diablo IV\\Data\\000\\0x0103-meta.dat",
+      "D:\\SteamLibrary\\steamapps\\common\\Diablo IV\\Data\\000\\1944276-0000.dat"
+    ],
+    "local_enUS_package_markers": [
+      "D:\\SteamLibrary\\steamapps\\common\\Diablo IV\\Data\\001\\1893651-child.dat"
+    ],
+    "local_plain_text_log_hits": [
+      "D:\\SteamLibrary\\steamapps\\common\\Diablo IV\\_FenrisDebug-6.txt"
+    ]
   },
   "terms": [
     {
@@ -152,7 +164,7 @@
         { "en": "Andariel's Visage", "ko": "안다리엘의 두개골" },
         { "en": "Doombringer", "ko": "궤멸자" },
         { "en": "Harlequin Crest", "ko": "할리퀸 관모", "aliases": ["Shako"] },
-        { "en": "Heir of Perdition", "ko": "파멸의 계승자" },
+        { "en": "Heir of Perdition", "ko": "영벌의 후예", "source": "wowhead_ko_heir_of_perdition" },
         { "en": "Melted Heart of Selig", "ko": "셀리그의 녹은 심장" },
         { "en": "Nesekem, the Herald", "ko": "전령 네세켐" },
         { "en": "Ring of Starless Skies", "ko": "별 없는 하늘의 반지" },
@@ -205,7 +217,7 @@
         { "en": "Lidless Wall", "ko": "각성의 벽" },
         { "en": "Locran's Talisman", "ko": "로크란의 영물" },
         { "en": "Mad Wolf's Glee", "ko": "미친 늑대의 환희" },
-        { "en": "Mothers Embrace", "ko": "어머니의 품" },
+        { "en": "Mother's Embrace", "ko": "어머니의 품", "aliases": ["Mothers Embrace"] },
         { "en": "Overkill", "ko": "과잉 살상" },
         { "en": "Paingorger's Gauntlets", "ko": "고통탐식자의 팔목 장갑" },
         { "en": "Penitent Greaves", "ko": "참회의 경갑" },
@@ -221,7 +233,7 @@
         { "en": "Soulbrand", "ko": "영혼 낙인" },
         { "en": "Staff of Endless Rage", "ko": "끝없는 분노의 지팡이" },
         { "en": "Staff of Lam Esen", "ko": "람 에센의 지팡이" },
-        { "en": "Starfall Coronet", "ko": "별똥별 관" },
+        { "en": "Starfall Coronet", "ko": "별똥별의 관" },
         { "en": "Storm's Companion", "ko": "폭풍의 동료" },
         { "en": "Tal Rasha's Iridescent Loop", "ko": "탈 라샤의 오색찬란한 고리" },
         { "en": "Temerity", "ko": "만용" },
@@ -288,10 +300,10 @@
         { "en": "Heartseeker", "ko": "심장추적자" },
         { "en": "Invigorating Strike", "ko": "원기의 일격" },
         { "en": "Puncture", "ko": "구멍 뚫기" },
-        { "en": "Barrage", "ko": "연발 사격" },
+        { "en": "Barrage", "ko": "탄막" },
         { "en": "Flurry", "ko": "연타" },
         { "en": "Penetrating Shot", "ko": "꿰뚫는 사격" },
-        { "en": "Rapid Fire", "ko": "속사" },
+        { "en": "Rapid Fire", "ko": "연발 사격" },
         { "en": "Twisting Blades", "ko": "회전 칼날" },
         { "en": "Caltrops", "ko": "쇠못 덫" },
         { "en": "Dash", "ko": "질주" },
@@ -308,7 +320,7 @@
         { "en": "Frost Bolt", "ko": "서리 화살" },
         { "en": "Spark", "ko": "벼락불" },
         { "en": "Chain Lightning", "ko": "연쇄 번개" },
-        { "en": "Charged Bolts", "ko": "전하 방출" },
+        { "en": "Charged Bolts", "ko": "번개 줄기" },
         { "en": "Fireball", "ko": "화염구" },
         { "en": "Frozen Orb", "ko": "얼음 보주" },
         { "en": "Ice Shards", "ko": "얼음 파편" },
@@ -325,8 +337,8 @@
       "entries": [
         { "en": "Earth Spike", "ko": "대지의 쐐기" },
         { "en": "Storm Strike", "ko": "폭풍 강타" },
-        { "en": "Claw", "ko": "할퀴기" },
-        { "en": "Maul", "ko": "후려갈기기" },
+        { "en": "Claw", "ko": "발톱" },
+        { "en": "Maul", "ko": "할퀴기" },
         { "en": "Wind Shear", "ko": "바람 칼날" },
         { "en": "Landslide", "ko": "산사태" },
         { "en": "Lightning Storm", "ko": "번개 폭풍" },
@@ -338,6 +350,14 @@
         { "en": "Debilitating Roar", "ko": "쇠약의 포효" },
         { "en": "Earthen Bulwark", "ko": "대지 방벽" },
         { "en": "Cataclysm", "ko": "대격변" }
+      ]
+    },
+    {
+      "category": "skill_spiritborn",
+      "entries": [
+        { "en": "Crushing Hand", "ko": "짓이기는 손", "source": "wowhead_ko_skill_1519050" },
+        { "en": "Crushing Force", "ko": "짓이기는 힘", "source": "wowhead_ko_skill_1484926" },
+        { "en": "Crushing", "ko": "으스러뜨리는" }
       ]
     },
     {
