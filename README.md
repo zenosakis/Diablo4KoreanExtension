@@ -1,43 +1,38 @@
 # Diablo IV Korean Translator
 
-Chrome extension for translating Diablo IV build/info sites into Korean while
-preserving Korean in-game terminology.
+디아블로 IV 빌드/정보 사이트의 영어 내용을 한국어로 번역하는 Chrome 확장 프로그램입니다.
+일반 번역 전에 디아블로 IV 용어 사전을 먼저 적용해서 아이템, 기술, 상태 효과, 정복자 노드 같은 표현이 한국어판 인게임 용어에 가깝게 표시되도록 합니다.
 
-## Supported sites
+## 지원 사이트
 
 - `https://maxroll.gg/*`
 - `https://helltides.com/*`
 
-## How to install locally
+## 로컬 설치 방법
 
-1. Open Chrome.
-2. Go to `chrome://extensions`.
-3. Enable Developer mode.
-4. Click Load unpacked.
-5. Select this project folder:
-   `D:\work\KYN\99.테스트Source\Diablo4KoreanExtension`
-6. Open a supported site and use the extension popup to enable translation.
+1. Chrome을 엽니다.
+2. 주소창에 `chrome://extensions`를 입력합니다.
+3. 오른쪽 위의 개발자 모드를 켭니다.
+4. 압축해제된 확장 프로그램을 로드합니다 버튼을 누릅니다.
+5. 이 프로젝트를 압축 해제한 폴더를 선택합니다.
+6. 지원 사이트에 접속한 뒤 확장 프로그램 팝업에서 번역을 활성화합니다.
 
-## Translation behavior
+## 번역 방식
 
-The extension always applies the local Diablo IV glossary first:
+확장 프로그램은 항상 로컬 디아블로 IV 용어 사전을 먼저 적용합니다.
 
 - `data/diablo4-ko-glossary.json`
 - `data/diablo4-ko-phrase-rules.json`
 
-If Chrome exposes the built-in Translator API, the extension also translates
-ordinary English sentences to Korean. Diablo IV terms are protected with
-temporary placeholders before machine translation and restored afterward, so
-the translator is less likely to distort in-game Korean terminology. If the API
-is unavailable, it falls back to glossary-only translation.
+Chrome에서 내장 Translator API를 사용할 수 있는 경우에는 일반 영어 문장도 한국어로 번역합니다.
+이때 디아블로 IV 고유 용어는 임시 토큰으로 보호한 뒤 번역이 끝나면 다시 한국어 인게임 용어로 복원합니다.
 
-## Development notes
+내장 Translator API를 사용할 수 없는 환경에서는 일반 문장 번역 없이 용어 사전 치환만 동작합니다.
 
-- The content script stores original text nodes so disabling the extension can
-  restore the page text.
-- Dynamic content and tooltips are handled with a `MutationObserver`.
-- Longest glossary terms are replaced first to prevent partial replacements
-  such as `Damage` being replaced before `Critical Strike Damage`.
-- Phrase rules clean up common build-guide wording after machine translation.
-- The glossary should be updated each Diablo IV season because items, affixes,
-  and activities can change.
+## 개발 메모
+
+- 콘텐츠 스크립트는 원문 텍스트 노드를 저장해 두므로 확장 프로그램을 비활성화하면 페이지 텍스트를 되돌릴 수 있습니다.
+- 동적으로 로드되는 빌드 정보와 툴팁은 `MutationObserver`로 감지합니다.
+- 긴 용어를 먼저 치환해서 `Critical Strike Damage`보다 `Damage`가 먼저 바뀌는 문제를 방지합니다.
+- `Might` 같은 짧은 고유명사는 일반 문장 오번역을 줄이기 위해 필요한 경우 대소문자를 구분해서 매칭합니다.
+- 디아블로 IV는 시즌과 확장팩마다 아이템, 속성, 기술, 정복자 노드가 추가되므로 용어 사전은 계속 갱신해야 합니다.
