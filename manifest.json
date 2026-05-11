@@ -7,17 +7,14 @@
     "default_popup": "popup/popup.html",
     "default_title": "Diablo IV Korean Translator"
   },
-  "permissions": ["activeTab", "storage", "scripting"],
-  "host_permissions": [
-    "https://maxroll.gg/*",
-    "https://helltides.com/*"
-  ],
+  "background": {
+    "service_worker": "src/background.js"
+  },
+  "permissions": ["activeTab", "storage", "scripting", "tabs"],
+  "host_permissions": ["https://maxroll.gg/*", "https://*.maxroll.gg/*"],
   "content_scripts": [
     {
-      "matches": [
-        "https://maxroll.gg/*",
-        "https://helltides.com/*"
-      ],
+      "matches": ["https://maxroll.gg/*", "https://*.maxroll.gg/*"],
       "js": ["src/content.js"],
       "run_at": "document_idle"
     }
@@ -28,10 +25,7 @@
         "data/diablo4-ko-glossary.json",
         "data/diablo4-ko-phrase-rules.json"
       ],
-      "matches": [
-        "https://maxroll.gg/*",
-        "https://helltides.com/*"
-      ]
+      "matches": ["https://maxroll.gg/*", "https://*.maxroll.gg/*"]
     }
   ]
 }
